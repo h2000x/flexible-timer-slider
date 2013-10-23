@@ -1,0 +1,61 @@
+<!doctype html>
+ 
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>jQuery UI Slider - Default functionality</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script type="text/javascript" src='js/functions.js'></script>
+  <script type="text/javascript" src='js/flexibleTimeSlider.js'></script>
+  
+
+  <script type="text/javascript">
+  $(function() {
+
+    testSlider =   flexibleTimeSlider;
+    testSlider.config({
+      display: '#time_field',
+      switchPoints : [
+          {
+            start: 0,
+            step: 1
+          },
+          {
+            start: 30,
+            step: 5
+          },
+          {
+            start: 84,
+            step: 10
+          },
+          {
+            start: 96,
+            step: 30
+          }
+        ]
+      
+    });
+
+    $( "#slider" ).slider({ 
+      min: 1,
+      max: 100,
+      value: 25,
+      slide: function(){
+        var value = $( "#slider" ).slider(  "value" );
+         testSlider.value2time( value ) ;
+      }
+    });
+
+
+  });
+  </script>
+</head>
+<body>
+ 
+<div id="slider"></div>
+ <a href="#" id="time_field">Time_field</a>
+ 
+</body>
+</html>

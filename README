@@ -1,0 +1,7 @@
+Goal of this programm is to create a slider, which measures time, at first in seconds. But at a defined point in five second steps, at another defined point at 10 second steps, an so on.
+
+Requirements (i work with, but i'm it works with lower versions):
+jquery: 1.9.1
+jquery-ui 10.3
+
+
